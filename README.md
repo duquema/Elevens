@@ -32,10 +32,26 @@ $ git push origin a#
 
 ## Switching to the next activity
 
-The activities have not all been pushed at the start of the lab because each activity builds on the next and sometimes has working versions of the problems from the previous activities.
+### Activities 1-5
 
-To move to the next activity, show your completed solution to your instructor. He will then push a branch for you to use for the next activity. The branch name will be formatted like this: `<your github username>-a#`. For example, Abe Lincoln would move to activity 4 with this command:
+Change the # to the number of the activity you want to grab.
+
 ```
+$ git fetch upstream a#
+$ git checkout -b a# upstream/a#
+```
+
+### Later Activities
+
+The remaining activities have not all been pushed because each activity builds on the next. Sometimes activities have working versions of the problems from the previous activities.
+
+To move to the next activity, show your completed solution to your instructor. He will then push a branch for you to use for the next activity. The branch name will be formatted like this: `<your github username>-a#`. For example, Abe Lincoln would move to activity 6 with this command:
+```
+<<<<<<< HEAD
 $ git fetch upstream four_score-a4
 $ git checkout -b a4 upstream/four_score-a4
+=======
+$ git fetch upstream four_score-a6
+$ git checkout -b a6 upstream/four_score-a6
+>>>>>>> c2521a215f428d7523731602a38497b255616eaf
 ```
