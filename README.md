@@ -48,10 +48,15 @@ The remaining activities have not all been pushed because each activity builds o
 To move to the next activity, show your completed solution to your instructor. He will then push a branch for you to use for the next activity. The branch name will be formatted like this: `<your github username>-a#`. For example, Abe Lincoln would move to activity 6 with this command:
 ```
 <<<<<<< HEAD
+<<<<<<< HEAD
 $ git fetch upstream four_score-a4
 $ git checkout -b a4 upstream/four_score-a4
 =======
 $ git fetch upstream four_score-a6
 $ git checkout -b a6 upstream/four_score-a6
 >>>>>>> c2521a215f428d7523731602a38497b255616eaf
+=======
+$ git fetch upstream four_score-a6
+$ git checkout -b a6 upstream/four_score-a6
+>>>>>>> e85ad34f98e9752124cb4b4503b5f37e666971f7
 ```
