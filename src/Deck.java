@@ -1,28 +1,3 @@
-Skip to content
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
-
-@duquema
-Learn Git and GitHub without any code!
-Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
-
-
-duquema
-/
-Elevens
-forked from mvhs-apcs/Elevens
-0
-085
- Code Pull requests 0 Actions Projects 0 Wiki Security Insights Settings
-Elevens/src/Deck.java
-@tpadjen tpadjen Add starter code
-b7f03bf on Mar 4, 2016
-104 lines (90 sloc)  2.53 KB
-
 import java.util.List;
 import java.util.ArrayList;
 
@@ -55,7 +30,15 @@ public class Deck {
 	 * @param values is an array containing all of the card point values.
 	 */
 	public Deck(String[] ranks, String[] suits, int[] values) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+		cards = new ArrayList<Card>();
+		for (int i = 0; i < suits.length; i++){
+			for (int j = 0; j < ranks.length; j++){
+					Card addCard = new Card(ranks[j], suits[i], values[values.length - 1]);
+					cards.add(addCard);
+			}
+		}
+		size = cards.size();
+		shuffle();
 	}
 
 
@@ -64,7 +47,10 @@ public class Deck {
 	 * @return true if this deck is empty, false otherwise.
 	 */
 	public boolean isEmpty() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+		if (size == 0){
+			return true;
+		}
+		return false;
 	}
 
 	/**
@@ -72,7 +58,7 @@ public class Deck {
 	 * @return the number of undealt cards in this deck.
 	 */
 	public int size() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+		return size;
 	}
 
 	/**
@@ -89,7 +75,11 @@ public class Deck {
 	 *         previously dealt.
 	 */
 	public Card deal() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+		if (size == 0){
+			return null;
+		}
+		size--;
+		return cards.get(size);
 	}
 
 	/**
