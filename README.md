@@ -49,6 +49,7 @@ To move to the next activity, show your completed solution to your instructor. H
 ```
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 $ git fetch upstream four_score-a4
 $ git checkout -b a4 upstream/four_score-a4
 =======
@@ -59,4 +60,8 @@ $ git checkout -b a6 upstream/four_score-a6
 $ git fetch upstream four_score-a6
 $ git checkout -b a6 upstream/four_score-a6
 >>>>>>> e85ad34f98e9752124cb4b4503b5f37e666971f7
+=======
+$ git fetch upstream four_score-a6
+$ git checkout -b a6 upstream/four_score-a6
+>>>>>>> b9ce2b5449357d79ab7db9cc6163dfec2757e05a
 ```

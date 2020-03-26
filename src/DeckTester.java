@@ -8,26 +8,58 @@ public class DeckTester {
 	 *	@param args is not used.
 	 */
 	public static void main(String[] args) {
-		String[] suits = new String[]{"Hearts", "Clubs", "Diamonds", "Spades"};
-		String[] ranks1 = new String[]{"Jack", "Four", "Nine"};
-		String[] ranks2 = new String[]{"Queen", "Five", "Eight"};
-		String[] ranks3 = new String[]{"King", "Three", "Seven"};
-		int[] values1 = new int[]{1, 3, 5};
-		int[] values2 = new int[]{2, 4, 6};
-		int[] values3 = new int[]{9, 8, 7};
+		// String[] ranks = {"jack", "queen", "king"};
+		// String[] suits = {"blue", "red"};
+		// int[] pointValues = {11, 12, 13};
+		// Deck d = new Deck(ranks, suits, pointValues);
+		//
+		// System.out.println("**** Original Deck Methods ****");
+		// System.out.println("  toString:\n" + d.toString());
+		// System.out.println("  isEmpty: " + d.isEmpty());
+		// System.out.println("  size: " + d.size());
+		// System.out.println();
+		// System.out.println();
+		//
+		// System.out.println("**** Deal a Card ****");
+		// System.out.println("  deal: " + d.deal());
+		// System.out.println();
+		// System.out.println();
+		//
+		// System.out.println("**** Deck Methods After 1 Card Dealt ****");
+		// System.out.println("  toString:\n" + d.toString());
+		// System.out.println("  isEmpty: " + d.isEmpty());
+		// System.out.println("  size: " + d.size());
+		// System.out.println();
+		// System.out.println();
+		//
+		// System.out.println("**** Deal Remaining 5 Cards ****");
+		// for (int i = 0; i < 5; i++) {
+		// 	System.out.println("  deal: " + d.deal());
+		// }
+		// System.out.println();
+		// System.out.println();
+		//
+		// System.out.println("**** Deck Methods After All Cards Dealt ****");
+		// System.out.println("  toString:\n" + d.toString());
+		// System.out.println("  isEmpty: " + d.isEmpty());
+		// System.out.println("  size: " + d.size());
+		// System.out.println();
+		// System.out.println();
+		//
+		// System.out.println("**** Deal a Card From Empty Deck ****");
+		// System.out.println("  deal: " + d.deal());
+		// System.out.println();
+		// System.out.println();
 
-		Deck deck1 = new Deck(ranks1, suits, values1);
-		Deck deck2 = new Deck(ranks2, suits, values2);
-		Deck deck3 = new Deck(ranks3, suits, values3);
+		/* *** TO BE COMPLETED IN ACTIVITY 4 *** */
 
-		while (!deck1.isEmpty()) {
-			System.out.println(deck1.deal().toString());
-		}
-		while (!deck2.isEmpty()) {
-			System.out.println(deck2.deal().toString());
-		}
-		while (!deck3.isEmpty()) {
-			System.out.println(deck3.deal().toString());
+		String[] fullRanks = {"ace", "king", "queen", "jack", "10", "9", "8", "7", "6", "5", "4", "3", "2"};
+		String[] fullSuits = {"hearts", "diamonds", "spades", "clubs"};
+		int[] fullValues = {14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2};
+		Deck deck = new Deck(fullRanks, fullSuits, fullValues);
+		while (! deck.isEmpty()) {
+			Card cardOne = deck.deal();
+			System.out.println(cardOne);
 		}
 	}
 }
