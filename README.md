@@ -1,27 +1,46 @@
 # Elevens
 
-## Getting started
+## Activity 5 Instructions
 
-Fork and clone the [Elevens repo](http://github.com/mvhs-apcs/Elevens).
+Each of the folders Buggy1 through Buggy5 contain already compiled, runable code with logic errors, and the source files.
+Your job is to run the Tester programs, then correct the runtime problems that you encounter.
 
-Within the new folder, first setup the `upstream` repo so you can get new activity branches:
+To run the code, first move to the proper folder, then run the code normally (no need to compile the tester).
+
+Example for Buggy1:
+
 ```
-$ git remote add upstream https://github.com/mvhs-apcs/Elevens.git
+ $ cd Buggy1
+ $ java DeckTester
 ```
 
-Then create a branch that tracks with the original repo's activity 1 branch:
+You should see:
+
 ```
+<<<<<<< HEAD
 $ git fetch upstream a1
 $ git checkout -b a1 upstream/a1
+=======
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: -1
+	at java.util.ArrayList.elementData(ArrayList.java:418)
+	at java.util.ArrayList.get(ArrayList.java:431)
+	at Deck.deal(Deck.java:85)
+	at DeckTester.testEmpty(DeckTester.java:99)
+	at DeckTester.test1CardDeck(DeckTester.java:28)
+	at DeckTester.main(DeckTester.java:12)
+>>>>>>> upstream/a5
 ```
 
-This should give you all of the code necessary for activity 1.
+Next, fix the error(s).
 
-Read the instructions in `Elevens Lab Student Guide.pdf`.
+Then compile and run as usual:
 
-`answers.md` has been provided for you to write the answers to any questions asked in the Student Guide.
+```
+ $ javac DeckTester.java
+ $ java DeckTester
+```
 
-Make commits to this branch as you complete the steps outlined in the activity.
+Continue until the code runs as expected.
 
 ## Submitting
 
@@ -32,6 +51,7 @@ $ git push origin a#
 
 ## Switching to the next activity
 
+<<<<<<< HEAD
 ### Activities 1-5
 
 Change the # to the number of the activity you want to grab.
@@ -65,3 +85,9 @@ $ git fetch upstream four_score-a6
 $ git checkout -b a6 upstream/four_score-a6
 >>>>>>> b9ce2b5449357d79ab7db9cc6163dfec2757e05a
 ```
+=======
+```
+$ git fetch upstream a#
+$ git checkout -b a# upstream/a#
+```
+>>>>>>> upstream/a5
