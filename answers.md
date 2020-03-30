@@ -45,5 +45,28 @@ public static boolean arePermutations(int[] list1, int[] list2){
 }
 
 3. Suppose that the initial contents of the values array in Shuffler.java are {1, 2, 3,4} For what sequence of random integers would the efficient selection shuffle change values to contain {4, 3, 2, 1}?
-
 0, 1, 1
+
+
+
+Buggy1
+isEmpty() doesn't determine whether or not the deck is empty
+size == 1, but it should = 0
+
+Buggy2
+size() does not actually return the size
+size value may have been accidentally changed somewhere it wasn't supposed to be
+
+Buggy3
+shuffle() method does not work
+method returns the same deck, does not shuffle it at all
+wrong variables were inserted into the method; k and r should be flipped, so it just ended up returning the same thing
+
+Buggy4
+deal() function is WACK
+deal method set up incorrectly. it could be a number error with 52 being replaced by 51
+
+Buggy5
+either array list or for loops off
+error seems to be in the shuffle() method of the deck class- at least effects the functionality of the shuffle() method
+in one of the for loops, probably one number off i.e. 1-52 instead of 0-51 or vice versa
