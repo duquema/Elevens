@@ -1,0 +1,6 @@
+1. Discuss the similarities and differences between Elevens, Thirteens, and Tens.
+All match pairs that add up to a specific number, all have special rules for kings. Elevens and Tens have special rules for K Q & J but collect them in different amounts, Thirteens only collects Kings. Each have their own unique number which pairs add up to.
+2. As discussed previously, all of the instance variables are declared in the Board class. But it is the ElevensBoard class that “knows” the board size, and the ranks, suits, and point values of the cards in the deck. How do the Board instance variables get initialized with the ElevensBoard values? What is the exact mechanism?
+Uses super and inheritance to get the initial set up, but then ElevensBoard changes each method in its own code; the Board class is just a skeleton of the ElevensBoard class.
+3. Now examine the files Board.java, and ElevensBoard.java, found in the Activity8 Starter Code directory. Identify the abstract methods in Board.java. See how these methods are implemented in ElevensBoard. Do they cover all the differences between Elevens, Thirteens, and Tens as discussed in question 1? Why or why not?
+Not all, because other classes can still add on specific methods to that game itself.
